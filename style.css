@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;700&display=swap');
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+
+.attribution a {
+    color: white;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14em;
+    font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+    color: hsl(240, 6%, 50%);
+
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+}
+
+.container {
+    width: 280px;
+    max-width: 360px;
+    border-radius: 25px;
+    padding: 0 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.box-image {
+    display: none;
+}
+
+.header-desktop {
+    display: none;
+}
+
+.header-mobile {
+    display: flex;
+    flex-direction: column;
+    height: 12em;
+}
+
+.header-mobile img {
+    width: 250px;
+}
+
+.header-mobile img:last-of-type {
+    position: relative;
+    top: -19em;
+}
+
+.faq {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: hsl(238, 29%, 16%);
+    margin-bottom: 1.4em;
+}
+
+.icon {
+    height: 8px;
+    width: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+details {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    color: hsl(240, 6%, 50%);
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+}
+
+details>summary {
+    list-style-type: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+}
+
+
+details[open]>summary {
+    list-style-type: none;
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+}
+
+details>summary:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+@media only screen and (min-width: 635px) {
+    body {
+        padding: 0;
+    }
+
+    .box-image {
+        display: initial;
+        position: relative !important;
+        top: 28em !important;
+        left: -36em !important;
+    }
+
+    .header-desktop {
+        display: grid;
+        grid-template-rows: 60px 60px auto;
+        width: 400px;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4em;
+        width: 850px;
+        max-width: 850px;
+        min-width: 850px;
+        padding: 0;
+        clip-path: inset(0 0 0 0 round 25px);
+    }
+
+    .header-desktop img:first-of-type {
+        position: relative;
+        left: -42em;
+        top: -34em;
+        width: 70em;
+    }
+
+    .header-desktop img:nth-child(2) {
+        position: relative;
+        top: -13em;
+        left: -6em;
+        width: 34em;
+    }
+
+    .box-image {
+        position: absolute;
+        z-index: 1;
+        top: 28em;
+        left: 3.2em;
+    }
+
+    .faq {
+        width: 25em;
+        padding: 4em 0;
+    }
+
+    h1 {
+        text-align: left;
+    }
+}
